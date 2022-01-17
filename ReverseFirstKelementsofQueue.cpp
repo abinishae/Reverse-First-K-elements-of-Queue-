@@ -28,26 +28,17 @@ queue<int> modifyQueue(queue<int> q, int k) {
     queue<int> s = q;
     queue<int> a;
     stack<int> d;
-     queue<int> h;
-    for(int i=0; i<k; i++){
+      for(int i=0; i<k; i++){
        d.push(s.front());
        s.pop();
        }
-       
-       
-       for(int i=0; i<k; i++){
+      for(int i=0; i<k; i++){
        a.push(d.top());
        d.pop();
        }
        while(! s.empty()){
-       h.push(s.front());
+       a.push(s.front());
        s.pop();
-       }
-       while(! h.empty()){
-       a.push(h.front());
-       h.pop();
-       
-     //  cout<<a.front();
        }
        
     return a;
